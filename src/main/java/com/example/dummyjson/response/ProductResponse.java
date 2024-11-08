@@ -1,7 +1,6 @@
 package com.example.dummyjson.response;
 
 import com.example.dummyjson.dto.Product;
-
 import java.util.List;
 
 public class ProductResponse {

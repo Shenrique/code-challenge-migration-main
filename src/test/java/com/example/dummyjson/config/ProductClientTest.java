@@ -24,5 +24,4 @@ public class ProductClientTest {
         assertNotNull(productResponse);
         assertEquals(productResponse.get(0).getId(), 1L);
     }
-
 }

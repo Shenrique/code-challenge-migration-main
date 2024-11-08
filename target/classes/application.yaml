@@ -5,6 +5,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
+
 management:
   endpoints:
     web:

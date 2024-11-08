@@ -18,7 +18,6 @@ public class ProductService {
         ProductResponse productResponse = productClient.getAllProducts();
         return productResponse.getProducts();
     }
-
     public Product getProductById(Long id) {
         return productClient.getProductById(id);
     }

@@ -14,4 +14,5 @@ public class SwaggerConfig implements WebMvcConfigurer {
         return new OpenAPI().info(new Info().title("Api de Products")
                 .description("Documentação da API desafio").version("v1"));
     }
+
 }

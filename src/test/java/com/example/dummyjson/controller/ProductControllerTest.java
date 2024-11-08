@@ -30,6 +30,7 @@ public class ProductControllerTest {
 
     @Test
     public void testGetAllProducts() throws Exception {
+
         Product product1 = new Product();
         product1.setId(1L);
         product1.setTitle("Product 1");

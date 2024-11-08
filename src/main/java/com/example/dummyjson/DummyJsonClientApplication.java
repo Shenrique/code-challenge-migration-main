@@ -11,4 +11,5 @@ public class DummyJsonClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(DummyJsonClientApplication.class, args);
     }
+
 }

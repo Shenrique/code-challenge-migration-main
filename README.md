@@ -17,47 +17,42 @@ O desafio consiste em migrar este projeto para Java 17 e Spring Boot 3.2.5. Dura
 - Springdoc OpenAPI (Swagger UI)
 - Jakarta Validation API (para validação de dados)
 
-## Estrutura do Projeto Apos Refatoração.
+## Endpoints Disponíveis
+1. GET /api/products
+- Obtém todos os produtos.
+- Resposta (200): Lista de produtos.
+- 
+2. GET /api/products/{id}
+- Obtém um produto pelo ID.
+- Parâmetros: id (Long)
+- Resposta (200): Produto correspondente ao ID fornecido.
+- Resposta (404): Produto não encontrado.
 
-```bash
-dummyjson-client
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com.example.dummyjsonclient
-│   │   │       ├── DummyJsonClientApplication.java
-│   │   │       ├── config
-│   │   │       │   └── SwaggerConfig.java
-│   │   │       ├── controller
-│   │   │       │   └── ProductController.java
-|
-│   │   │       ├── dto
-│   │   │       │   └── Product.java
-│   │   │       ├── service
-│   │   │       │   └── ProductService.java
-│   │   └── resources
-│   │       └── application.yaml
-│   └── test
-│       ├── java
-│       │   └── com.example.dummyjsonclient
-│       │       ├── config
-│       │       │   └── RestTemplateConfigTest.java
-│       │       └── controller
-│       │       │   └── ProductControllerTest.java
-│       │       ├── dto
-│       │       │   └── ProductTest.java
-│       │       └── service
-│       │           └── ProductServiceTest.java
-│       └── resources
-└── pom.xml
-```
+## Acessando a Documentação Swagger-Ui
+
+Após iniciar o servidor, você pode acessar a documentação da sua API através do Swagger UI:
+
+1. Abra seu navegador e acesse a URL:
+
+    ```bash
+    http://localhost:8080/swagger-ui.html
+    ```
+No Swagger UI, você verá todos os endpoints da sua API documentados de forma interativa. Você pode testar os endpoints diretamente da interface.
+
+## Acessar saúde do microsserviço.
+- Utilizar url para Actuator.
+
+    ```bash
+    http://localhost:8080/actuator/health
+    ```
+
 
 ### Executar a Aplicação
 
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.ibm.com/Wendell-Santos/code-challenge-migration.git
+    git clone Shenrique/code-challenge-migration-main.git
     cd dummyjson-client
     ```
 
@@ -95,8 +90,3 @@ mvn clean test
 - O projeto deve estar funcionando em Java 17 e Spring Boot 3.2.5.
 - Todos os testes unitários devem ser executados e passar sem falhas.
 - O código deve estar devidamente documentado e organizado.
-
-## Extras
-
-- Entregar o projeto em container será um diferencial.
-- Fica a critério do desenvolvedor inserir ou remover dependencias do projeto para garantir o objetivo do challenge.
